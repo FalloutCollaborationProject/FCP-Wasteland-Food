@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <!-- About Information -->
+
+    <packageId>Rick.FCP.WastelandFood</packageId>
+    <author>Rick</author>
+    <name>FCP - Wasteland Food</name>
+    <description>The Fallout Collaboration Project Presents: Wasteland Food, an item, food and crafting mod.</description>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Rick.FCP.Core.Tools</packageId>
+            <displayName>FCP - Tools</displayName>
+            <downloadUrl>https://github.com/FalloutCollaborationProject/FCP-Tools</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Rick.FCP.Core.Tools</li>
+    </loadAfter>
+
+</ModMetaData>
