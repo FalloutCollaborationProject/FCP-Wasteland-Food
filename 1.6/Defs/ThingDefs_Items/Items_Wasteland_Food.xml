@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Wasteland Food __________-->
+
+    <!-- Base -->
+
+    <ThingDef Name="FCP_Food_Wasteland_Meals_Base" Abstract="True" ParentName="MealBase">
+        <statBases>
+            <DeteriorationRate>10</DeteriorationRate>
+            <Mass>0.5</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <graphicData>
+            <drawSize>0.70</drawSize>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <tradeability>Sellable</tradeability>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <preferability>MealSimple</preferability>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Ingredients" />
+        </comps>
+    </ThingDef>
+
+    <!--_____ Black Blood Sausage _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Black_Blood_Sausage</defName>
+        <label>black blood sausage</label>
+        <description>A dark, rich sausage made from the blood and meat of various wasteland creatures. While nutritious and filling, the questionable ingredients and preparation methods can lead to minor toxic buildup. A favorite among raiders and desperate survivors.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Black_Blood_Sausage/FCP_Black_Blood_Sausage</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>18</MarketValue>
+            <WorkToMake>450</WorkToMake>
+            <Nutrition>0.9</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <tasteThought>FCP_Ate_Wasteland_Food</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Toxic_Sausage</hediffDef>
+                    <severity>0.05</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Brahmin Pot Pie _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Brahmin_Pot_Pie</defName>
+        <label>brahmin pot pie</label>
+        <description>A hearty pot pie filled with tender brahmin meat, tatos, and razorgrain. This comfort food from the wasteland provides a satisfying meal that reminds settlers of better times. The rich brahmin meat provides a temporary boost to work speed.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Brahmin_Pot_Pie/FCP_Brahmin_Pot_Pie</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>25</MarketValue>
+            <WorkToMake>700</WorkToMake>
+            <Nutrition>0.9</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Quality_Wasteland_Food</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hearty_Meal</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Bug Mush _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Bug_Mush</defName>
+        <label>bug mush</label>
+        <description>A paste made from various insects ground into a protein-rich but unappetizing mush. It's filling and surprisingly nutritious, though the taste leaves much to be desired. The questionable hygiene can cause minor toxic buildup.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Bug_Mush/FCP_Bug_Mush</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>12</MarketValue>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.7</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>FCP_Ate_Bug_Mush</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Toxic_Sausage</hediffDef>
+                    <severity>0.03</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Chicken Noodle Cup _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Chicken_Noodle_Cup</defName>
+        <label>chicken noodle cup</label>
+        <description>A simple but comforting cup of noodles with chunks of rad chicken meat. Quick to prepare and easy on the stomach, this meal reminds people of simpler times. The warm broth provides a small mood boost.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Chicken_Noodle_Cup/FCP_Chicken_Noodle_Cup</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <WorkToMake>350</WorkToMake>
+            <Nutrition>0.7</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <tasteThought>FCP_Ate_Comfort_Food</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Cook-Cook's Fiend Stew _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Cook_Cooks_Fiend_Stew</defName>
+        <label>cook-cook's fiend stew</label>
+        <description>A spicy, aggressive stew made with whatever meat is available, heavily seasoned with jalapeños and wasteland spices. Named after the infamous Fiend cook, this meal gives a temporary boost to melee damage and pain tolerance, but the toxic ingredients cause buildup.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Cook_Cooks_Fiend_Stew/FCP_Cook_Cooks_Fiend_Stew</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>22</MarketValue>
+            <WorkToMake>650</WorkToMake>
+            <Nutrition>0.85</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Wasteland_Food</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Fiend_Stew_High</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Toxic_Sausage</hediffDef>
+                    <severity>0.08</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Crispy Wings _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Crispy_Wings</defName>
+        <label>crispy wings</label>
+        <description>Deep-fried rad chicken wings with a crispy golden coating. A popular snack in wasteland settlements, these wings are fried in vegetable oil until perfectly crispy. The indulgent meal provides a mood boost.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Crispy_Wings/FCP_Crispy_Wings</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>20</MarketValue>
+            <WorkToMake>500</WorkToMake>
+            <Nutrition>0.8</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Tasty_Wasteland_Food</tasteThought>
+            <joy>0.08</joy>
+            <joyKind>Gluttonous</joyKind>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Deathclaw Steak and Eggs _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Deathclaw_Steak_And_Eggs</defName>
+        <label>deathclaw steak and eggs</label>
+        <description>A premium meal of grilled deathclaw steak served with fresh eggs. Deathclaw meat is incredibly rare and prized for its flavor and nutritional value. This meal provides significant stat boosts including increased movement speed and melee damage for a time.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Deathclaw_Steak_And_Eggs/FCP_Deathclaw_Steak_And_Eggs</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>55</MarketValue>
+            <WorkToMake>800</WorkToMake>
+            <Nutrition>1.0</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealLavish</preferability>
+            <tasteThought>FCP_Ate_Luxurious_Wasteland_Food</tasteThought>
+            <joy>0.12</joy>
+            <joyKind>Gluttonous</joyKind>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Deathclaw_Strength</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Deathclaw Steak and Razorgrain _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Deathclaw_Steak_And_Razorgrain</defName>
+        <label>deathclaw steak and razorgrain</label>
+        <description>Tender deathclaw steak served alongside razorgrain. The combination of premium meat and hearty grain creates a satisfying and nutritious meal that boosts work efficiency and provides stamina.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Deathclaw_Steak_And_Razorgrain/FCP_Deathclaw_Steak_And_Razorgrain</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>50</MarketValue>
+            <WorkToMake>750</WorkToMake>
+            <Nutrition>1.0</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealLavish</preferability>
+            <tasteThought>FCP_Ate_Luxurious_Wasteland_Food</tasteThought>
+            <joy>0.10</joy>
+            <joyKind>Gluttonous</joyKind>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hearty_Meal</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Flea Soup _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Flea_Soup</defName>
+        <label>flea soup</label>
+        <description>A thin broth made from small wasteland creatures and scraps. While barely palatable and nearly flavorless, it prevents starvation. The questionable ingredients can cause minor toxic buildup.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Flea_Soup/FCP_Flea_Soup</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>8</MarketValue>
+            <WorkToMake>250</WorkToMake>
+            <Nutrition>0.6</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>FCP_Ate_Flea_Soup</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Toxic_Sausage</hediffDef>
+                    <severity>0.04</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Meat on a Stick _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Meat_On_A_Stick</defName>
+        <label>meat on a stick</label>
+        <description>Simple grilled meat skewered on a stick. Quick to prepare and easy to eat on the go, this basic meal is a staple of wasteland traders and travelers.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Meat_On_A_Stick/FCP_Meat_On_A_Stick</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>14</MarketValue>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.75</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <tasteThought>FCP_Ate_Wasteland_Food</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Noodle Cup _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Noodle_Cup</defName>
+        <label>noodle cup</label>
+        <description>A basic cup of noodles made from razorgrain flour. While bland and unremarkable, it's cheap, filling, and quick to prepare. A wasteland staple.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Noodle_Cup/FCP_Noodle_Cup</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>10</MarketValue>
+            <WorkToMake>250</WorkToMake>
+            <Nutrition>0.65</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <tasteThought>FCP_Ate_Wasteland_Food</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Prime Meat Steak _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Prime_Meat_Steak</defName>
+        <label>prime meat steak</label>
+        <description>A well-prepared steak from prime wasteland beast meat. Properly cooked and seasoned, this meal is a treat in the harsh wasteland. The high-quality protein provides a temporary boost to consciousness and blood pumping.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Prime_Meat_Steak/FCP_Prime_Meat_Steak</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>30</MarketValue>
+            <WorkToMake>600</WorkToMake>
+            <Nutrition>0.9</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Quality_Wasteland_Food</tasteThought>
+            <joy>0.06</joy>
+            <joyKind>Gluttonous</joyKind>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Prime_Meal_Boost</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Prime Meat Steak with Corn and Tatos _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Prime_Meat_Steak_With_Corn_And_Tatos</defName>
+        <label>prime meat steak with corn and tatos</label>
+        <description>A lavish meal featuring premium steak served with grilled maize and roasted tatos. This well-balanced meal combines the best ingredients the wasteland has to offer. Provides significant stat boosts and mood improvement.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Prime_Meat_Steak_With_Corn_And_Tatos/FCP_Prime_Meat_Steak_With_Corn_And_Tatos</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>40</MarketValue>
+            <WorkToMake>850</WorkToMake>
+            <Nutrition>1.0</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealLavish</preferability>
+            <tasteThought>FCP_Ate_Luxurious_Wasteland_Food</tasteThought>
+            <joy>0.15</joy>
+            <joyKind>Gluttonous</joyKind>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Lavish_Meal_Boost</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Sausages _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Sausages</defName>
+        <label>sausages</label>
+        <description>Simple grilled sausages made from ground wasteland meat and spices. A straightforward, filling meal that's easy to prepare and transport. Popular among caravans.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Sausages/FCP_Sausages</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>16</MarketValue>
+            <WorkToMake>400</WorkToMake>
+            <Nutrition>0.8</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <tasteThought>FCP_Ate_Wasteland_Food</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

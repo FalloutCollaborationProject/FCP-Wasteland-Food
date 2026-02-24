@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Wasteland Food Thoughts __________-->
+
+    <!--_____ Wasteland Food (Basic) _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Wasteland_Food</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.5</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate wasteland food</label>
+                <description>Simple wasteland cooking. It fills the belly.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Quality Wasteland Food _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Quality_Wasteland_Food</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.75</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate quality wasteland food</label>
+                <description>A well-prepared meal from the wasteland. Actually quite tasty!</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Tasty Wasteland Food _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Tasty_Wasteland_Food</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.75</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate tasty wasteland food</label>
+                <description>That was delicious! Who knew wasteland food could taste so good?</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Luxurious Wasteland Food _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Luxurious_Wasteland_Food</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>1.0</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate luxurious wasteland food</label>
+                <description>An exceptional meal! The kind of food that makes life in the wasteland worth living.</description>
+                <baseMoodEffect>8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Comfort Food _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Comfort_Food</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.5</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate comfort food</label>
+                <description>A warm, comforting meal. It reminds me of better times.</description>
+                <baseMoodEffect>4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Bug Mush (Awful) _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Bug_Mush</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.5</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate bug mush</label>
+                <description>That was disgusting. Ground up insects... I can still feel them.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!--_____ Flea Soup (Terrible) _____-->
+
+    <ThoughtDef>
+        <defName>FCP_Ate_Flea_Soup</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>0.5</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>ate flea soup</label>
+                <description>That was barely food. Just murky water with bits floating in it.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

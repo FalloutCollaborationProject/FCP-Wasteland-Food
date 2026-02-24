@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Wasteland Food Recipes __________-->
+
+    <!-- Base Recipe -->
+
+    <RecipeDef Name="FCP_CookWastelandMealBase" Abstract="True">
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>false</allowMixingIngredients>
+        <workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+    <!-- Simple Fueled Station (Basic meals, skill 1-2) -->
+
+    <RecipeDef Name="FCP_CookWastelandMeal_Simple" ParentName="FCP_CookWastelandMealBase" Abstract="True">
+        <recipeUsers>
+            <li>FCP_Production_Cooking_Station_Fueled_Simple</li>
+            <li>FCP_Production_Cooking_Station_Fueled_Complex</li>
+            <li>FCP_Production_Cooking_Station_Electric</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Complex Fueled Station (Mid-tier meals, skill 3-6) -->
+
+    <RecipeDef Name="FCP_CookWastelandMeal_Complex" ParentName="FCP_CookWastelandMealBase" Abstract="True">
+        <recipeUsers>
+            <li>FCP_Production_Cooking_Station_Fueled_Complex</li>
+            <li>FCP_Production_Cooking_Station_Electric</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!-- Electric Station (Advanced meals, skill 7+) -->
+
+    <RecipeDef Name="FCP_CookWastelandMeal_Electric" ParentName="FCP_CookWastelandMealBase" Abstract="True">
+        <recipeUsers>
+            <li>FCP_Production_Cooking_Station_Electric</li>
+        </recipeUsers>
+    </RecipeDef>
+
+    <!--_____ Black Blood Sausage _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Black_Blood_Sausage</defName>
+        <label>cook black blood sausage</label>
+        <description>Cook black blood sausage from wasteland meat and blood.</description>
+        <jobString>Cooking black blood sausage.</jobString>
+        <workAmount>450</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Black_Blood_Sausage>1</FCP_Food_Black_Blood_Sausage>
+        </products>
+        <skillRequirements>
+            <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Brahmin Pot Pie _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Brahmin_Pot_Pie</defName>
+        <label>cook brahmin pot pie</label>
+        <description>Cook a hearty brahmin pot pie with prime beast meat, tatos, and razorgrain.</description>
+        <jobString>Cooking brahmin pot pie.</jobString>
+        <workAmount>700</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Prime_Beast</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Tato</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Brahmin_Pot_Pie>1</FCP_Food_Brahmin_Pot_Pie>
+        </products>
+        <skillRequirements>
+            <Cooking>6</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Bug Mush _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Simple">
+        <defName>FCP_Cook_Bug_Mush</defName>
+        <label>cook bug mush</label>
+        <description>Grind insects into a protein-rich mush.</description>
+        <jobString>Cooking bug mush.</jobString>
+        <workAmount>300</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Bug_Mush>1</FCP_Food_Bug_Mush>
+        </products>
+        <skillRequirements>
+            <Cooking>1</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Chicken Noodle Cup _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Chicken_Noodle_Cup</defName>
+        <label>cook chicken noodle cup</label>
+        <description>Cook a simple chicken noodle cup with poultry and razorgrain noodles.</description>
+        <jobString>Cooking chicken noodle cup.</jobString>
+        <workAmount>350</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Chicken_Noodle_Cup>1</FCP_Food_Chicken_Noodle_Cup>
+        </products>
+        <skillRequirements>
+            <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Cook-Cook's Fiend Stew _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Cook_Cooks_Fiend_Stew</defName>
+        <label>cook cook-cook's fiend stew</label>
+        <description>Cook a spicy, aggressive stew with whatever meat is available and plenty of jalapeños.</description>
+        <jobString>Cooking fiend stew.</jobString>
+        <workAmount>650</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Jalapeno</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Cook_Cooks_Fiend_Stew>1</FCP_Food_Cook_Cooks_Fiend_Stew>
+        </products>
+        <skillRequirements>
+            <Cooking>5</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Crispy Wings _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Crispy_Wings</defName>
+        <label>cook crispy wings</label>
+        <description>Deep-fry rad chicken wings until crispy and golden.</description>
+        <jobString>Cooking crispy wings.</jobString>
+        <workAmount>500</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Crispy_Wings>1</FCP_Food_Crispy_Wings>
+        </products>
+        <skillRequirements>
+            <Cooking>5</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Deathclaw Steak and Eggs _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Electric">
+        <defName>FCP_Cook_Deathclaw_Steak_And_Eggs</defName>
+        <label>cook deathclaw steak and eggs</label>
+        <description>Prepare a premium meal of deathclaw steak with fresh eggs.</description>
+        <jobString>Cooking deathclaw steak and eggs.</jobString>
+        <workAmount>800</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>EggsUnfertilized</li>
+                    </categories>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Deathclaw_Steak_And_Eggs>1</FCP_Food_Deathclaw_Steak_And_Eggs>
+        </products>
+        <skillRequirements>
+            <Cooking>8</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Deathclaw Steak and Razorgrain _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Electric">
+        <defName>FCP_Cook_Deathclaw_Steak_And_Razorgrain</defName>
+        <label>cook deathclaw steak and razorgrain</label>
+        <description>Prepare deathclaw steak served with razorgrain.</description>
+        <jobString>Cooking deathclaw steak and razorgrain.</jobString>
+        <workAmount>750</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Deathclaw_Steak_And_Razorgrain>1</FCP_Food_Deathclaw_Steak_And_Razorgrain>
+        </products>
+        <skillRequirements>
+            <Cooking>8</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Flea Soup _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Simple">
+        <defName>FCP_Cook_Flea_Soup</defName>
+        <label>cook flea soup</label>
+        <description>Boil a thin broth from small creatures and scraps.</description>
+        <jobString>Cooking flea soup.</jobString>
+        <workAmount>250</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Varmint</li>
+                        <li>FCP_Meat_Prime_Varmint</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Flea_Soup>1</FCP_Food_Flea_Soup>
+        </products>
+        <skillRequirements>
+            <Cooking>1</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Meat on a Stick _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Simple">
+        <defName>FCP_Cook_Meat_On_A_Stick</defName>
+        <label>cook meat on a stick</label>
+        <description>Grill simple meat skewers over an open flame.</description>
+        <jobString>Cooking meat on a stick.</jobString>
+        <workAmount>300</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Meat_On_A_Stick>1</FCP_Food_Meat_On_A_Stick>
+        </products>
+        <skillRequirements>
+            <Cooking>2</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Noodle Cup _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Simple">
+        <defName>FCP_Cook_Noodle_Cup</defName>
+        <label>cook noodle cup</label>
+        <description>Prepare a basic cup of razorgrain noodles.</description>
+        <jobString>Cooking noodle cup.</jobString>
+        <workAmount>250</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Noodle_Cup>1</FCP_Food_Noodle_Cup>
+        </products>
+        <skillRequirements>
+            <Cooking>1</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Prime Meat Steak _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Prime_Meat_Steak</defName>
+        <label>cook prime meat steak</label>
+        <description>Prepare a well-cooked steak from prime wasteland beast meat.</description>
+        <jobString>Cooking prime meat steak.</jobString>
+        <workAmount>600</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Prime_Beast</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Prime_Meat_Steak>1</FCP_Food_Prime_Meat_Steak>
+        </products>
+        <skillRequirements>
+            <Cooking>6</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Prime Meat Steak with Corn and Tatos _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Electric">
+        <defName>FCP_Cook_Prime_Meat_Steak_With_Corn_And_Tatos</defName>
+        <label>cook prime meat steak with corn and tatos</label>
+        <description>Prepare a lavish meal of prime steak with grilled maize and roasted tatos.</description>
+        <jobString>Cooking prime steak with corn and tatos.</jobString>
+        <workAmount>850</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Prime_Beast</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Maize</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Tato</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Prime_Meat_Steak_With_Corn_And_Tatos>1</FCP_Food_Prime_Meat_Steak_With_Corn_And_Tatos>
+        </products>
+        <skillRequirements>
+            <Cooking>9</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Sausages _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Sausages</defName>
+        <label>cook sausages</label>
+        <description>Grill simple sausages from ground wasteland meat.</description>
+        <jobString>Cooking sausages.</jobString>
+        <workAmount>400</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MeatRaw</li>
+                    </categories>
+                </filter>
+                <count>7</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Sausages>1</FCP_Food_Sausages>
+        </products>
+        <skillRequirements>
+            <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

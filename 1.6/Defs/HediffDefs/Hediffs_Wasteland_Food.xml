@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--__________ Wasteland Food Effects __________-->
+
+    <!--_____ Toxic Sausage (Toxic Buildup) _____-->
+
+    <HediffDef>
+        <defName>FCP_Toxic_Sausage</defName>
+        <label>wasteland toxins</label>
+        <description>Minor toxic buildup from consuming poorly prepared or contaminated wasteland food.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.7, 0.7, 0.3)</defaultLabelColor>
+        <isBad>true</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.5</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <minSeverity>0</minSeverity>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.02</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.20</minSeverity>
+                <label>mild</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.50</minSeverity>
+                <label>moderate</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--_____ Hearty Meal (Work Speed Boost) _____-->
+
+    <HediffDef>
+        <defName>FCP_Hearty_Meal</defName>
+        <label>hearty meal</label>
+        <description>A nutritious meal providing energy and focus for work.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.4, 0.8, 0.4)</defaultLabelColor>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.10</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--_____ Fiend Stew High (Combat Boost) _____-->
+
+    <HediffDef>
+        <defName>FCP_Fiend_Stew_High</defName>
+        <label>fiend rage</label>
+        <description>An aggressive surge of energy from cook-cook's spicy stew, boosting combat prowess but causing minor pain.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.3, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painOffset>0.05</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.08</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDamageFactor>0.15</MeleeDamageFactor>
+                    <PainShockThreshold>0.10</PainShockThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--_____ Deathclaw Strength (Premium Combat Boost) _____-->
+
+    <HediffDef>
+        <defName>FCP_Deathclaw_Strength</defName>
+        <label>deathclaw strength</label>
+        <description>The powerful nutrients from deathclaw meat enhance physical capabilities.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDamageFactor>0.20</MeleeDamageFactor>
+                    <MeleeHitChance>5</MeleeHitChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--_____ Prime Meal Boost (Health Boost) _____-->
+
+    <HediffDef>
+        <defName>FCP_Prime_Meal_Boost</defName>
+        <label>premium nutrition</label>
+        <description>High-quality protein enhancing overall health and vitality.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3, 0.7, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--_____ Lavish Meal Boost (Multiple Stat Boost) _____-->
+
+    <HediffDef>
+        <defName>FCP_Lavish_Meal_Boost</defName>
+        <label>lavish nutrition</label>
+        <description>An exceptionally well-balanced meal providing comprehensive stat improvements.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.7, 0.3)</defaultLabelColor>
+        <isBad>false</isBad>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.08</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.08</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+                    <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>
