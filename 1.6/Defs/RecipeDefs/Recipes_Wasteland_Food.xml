@@ -35,7 +35,7 @@
         <workSkill>Cooking</workSkill>
     </RecipeDef>
 
-    <!-- Simple Fueled Station (Basic meals, skill 1-2) -->
+    <!-- Simple Fueled Station -->
 
     <RecipeDef Name="FCP_CookWastelandMeal_Simple" ParentName="FCP_CookWastelandMealBase" Abstract="True">
         <recipeUsers>
@@ -45,7 +45,7 @@
         </recipeUsers>
     </RecipeDef>
 
-    <!-- Complex Fueled Station (Mid-tier meals, skill 3-6) -->
+    <!-- Complex Fueled Station -->
 
     <RecipeDef Name="FCP_CookWastelandMeal_Complex" ParentName="FCP_CookWastelandMealBase" Abstract="True">
         <recipeUsers>
@@ -54,7 +54,7 @@
         </recipeUsers>
     </RecipeDef>
 
-    <!-- Electric Station (Advanced meals, skill 7+) -->
+    <!-- Electric Station -->
 
     <RecipeDef Name="FCP_CookWastelandMeal_Electric" ParentName="FCP_CookWastelandMealBase" Abstract="True">
         <recipeUsers>
@@ -73,9 +73,20 @@
         <ingredients>
             <li>
                 <filter>
-                    <categories>
-                        <li>MeatRaw</li>
-                    </categories>
+                    <thingDefs>
+                        <li>FCP_Meat_Beast</li>
+                        <li>FCP_Meat_Prime_Beast</li>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                        <li>FCP_Meat_Crab</li>
+                        <li>FCP_Meat_Succulent_Fish</li>
+                        <li>FCP_Meat_Herptile</li>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                        <li>FCP_Meat_Varmint</li>
+                        <li>FCP_Meat_Prime_Varmint</li>
+                    </thingDefs>
                 </filter>
                 <count>8</count>
             </li>
@@ -203,9 +214,20 @@
         <ingredients>
             <li>
                 <filter>
-                    <categories>
-                        <li>MeatRaw</li>
-                    </categories>
+                    <thingDefs>
+                        <li>FCP_Meat_Beast</li>
+                        <li>FCP_Meat_Prime_Beast</li>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                        <li>FCP_Meat_Crab</li>
+                        <li>FCP_Meat_Succulent_Fish</li>
+                        <li>FCP_Meat_Herptile</li>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                        <li>FCP_Meat_Varmint</li>
+                        <li>FCP_Meat_Prime_Varmint</li>
+                    </thingDefs>
                 </filter>
                 <count>10</count>
             </li>
@@ -272,9 +294,22 @@
             </li>
             <li>
                 <filter>
-                    <categories>
-                        <li>EggsUnfertilized</li>
-                    </categories>
+                    <thingDefs>
+                        <li>FCP_Egg_Rad_Chicken_Unfertilized</li>
+                        <li>FCP_Egg_Rad_Raven_Unfertilized</li>
+                        <li>FCP_Egg_Radgull_Unfertilized</li>
+                        <li>FCP_Egg_Deathclaw_Unfertilized</li>
+                        <li>FCP_Egg_Gecko_Unfertilized</li>
+                        <li>FCP_Egg_Golden_Gecko_Unfertilized</li>
+                        <li>FCP_Egg_Green_Gecko_Unfertilized</li>
+                        <li>FCP_Egg_Fire_Gecko_Unfertilized</li>
+                        <li>FCP_Egg_Mirelurk_Unfertilized</li>
+                        <li>FCP_Egg_Beachlurk_Unfertilized</li>
+                        <li>FCP_Egg_Riverlurk_Unfertilized</li>
+                        <li>FCP_Egg_Lakelurk_Unfertilized</li>
+                        <li>FCP_Egg_Radroach_Unfertilized</li>
+                        <li>FCP_Egg_Thrasher_Unfertilized</li>
+                    </thingDefs>
                 </filter>
                 <count>5</count>
             </li>
@@ -359,9 +394,20 @@
         <ingredients>
             <li>
                 <filter>
-                    <categories>
-                        <li>MeatRaw</li>
-                    </categories>
+                    <thingDefs>
+                        <li>FCP_Meat_Beast</li>
+                        <li>FCP_Meat_Prime_Beast</li>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                        <li>FCP_Meat_Crab</li>
+                        <li>FCP_Meat_Succulent_Fish</li>
+                        <li>FCP_Meat_Herptile</li>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                        <li>FCP_Meat_Varmint</li>
+                        <li>FCP_Meat_Prime_Varmint</li>
+                    </thingDefs>
                 </filter>
                 <count>6</count>
             </li>
@@ -479,9 +525,20 @@
         <ingredients>
             <li>
                 <filter>
-                    <categories>
-                        <li>MeatRaw</li>
-                    </categories>
+                    <thingDefs>
+                        <li>FCP_Meat_Beast</li>
+                        <li>FCP_Meat_Prime_Beast</li>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                        <li>FCP_Meat_Crab</li>
+                        <li>FCP_Meat_Succulent_Fish</li>
+                        <li>FCP_Meat_Herptile</li>
+                        <li>FCP_Meat_Prime_Herptile</li>
+                        <li>FCP_Meat_Poultry</li>
+                        <li>FCP_Meat_Plumb_Poultry</li>
+                        <li>FCP_Meat_Varmint</li>
+                        <li>FCP_Meat_Prime_Varmint</li>
+                    </thingDefs>
                 </filter>
                 <count>7</count>
             </li>
@@ -491,6 +548,85 @@
         </products>
         <skillRequirements>
             <Cooking>3</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Skeeto Spit _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Simple">
+        <defName>FCP_Cook_Skeeto_Spit</defName>
+        <label>cook skeeto spit</label>
+        <description>Grill skeeto meat on a stick. The meat is questionable, but it's edible.</description>
+        <jobString>Cooking skeeto spit.</jobString>
+        <workAmount>300</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Meat_Bug</li>
+                        <li>FCP_Meat_Plumb_Bug</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Skeeto_Spit>1</FCP_Food_Skeeto_Spit>
+        </products>
+        <skillRequirements>
+            <Cooking>1</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Sweet Rolls _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Sweet_Rolls</defName>
+        <label>bake sweet rolls</label>
+        <description>Bake soft, sweet pastries from razorgrain flour. A beloved treat across the wasteland.</description>
+        <jobString>Baking sweet rolls.</jobString>
+        <workAmount>450</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Sweet_Rolls>1</FCP_Food_Sweet_Rolls>
+        </products>
+        <skillRequirements>
+            <Cooking>4</Cooking>
+        </skillRequirements>
+    </RecipeDef>
+
+    <!--_____ Happy Birthday Sweet Roll _____-->
+
+    <RecipeDef ParentName="FCP_CookWastelandMeal_Complex">
+        <defName>FCP_Cook_Happy_Birthday_Sweet_Roll</defName>
+        <label>bake happy birthday sweet roll</label>
+        <description>Bake a special sweet roll decorated for celebrations. A rare luxury in the wasteland.</description>
+        <jobString>Baking happy birthday sweet roll.</jobString>
+        <workAmount>550</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FCP_Raw_Razorgrain</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <FCP_Food_Happy_Birthday_Sweet_Roll>1</FCP_Food_Happy_Birthday_Sweet_Roll>
+        </products>
+        <skillRequirements>
+            <Cooking>5</Cooking>
         </skillRequirements>
     </RecipeDef>
 

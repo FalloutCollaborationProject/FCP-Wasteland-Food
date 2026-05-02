@@ -375,4 +375,74 @@
         </ingestible>
     </ThingDef>
 
+    <!--_____ Skeeto Spit _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Skeeto_Spit</defName>
+        <label>skeeto spit</label>
+        <description>Grilled skeeto meat with a distinctive texture. These giant mosquito-like creatures are common in the wasteland, and while their meat is technically edible, the taste is questionable at best. The toxic nature of skeetos means this meal carries some risk.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Skeeto_Spit</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>11</MarketValue>
+            <WorkToMake>300</WorkToMake>
+            <Nutrition>0.7</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>FCP_Ate_Bug_Mush</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Toxic_Sausage</hediffDef>
+                    <severity>0.06</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Sweet Rolls _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Sweet_Rolls</defName>
+        <label>sweet rolls</label>
+        <description>Soft, sweet pastries glazed with sugar. These treats are a favorite across the wasteland, bringing comfort and joy to those lucky enough to have them. The sweet taste provides a mood boost.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Sweet_Rolls</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>18</MarketValue>
+            <WorkToMake>450</WorkToMake>
+            <Nutrition>0.75</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Tasty_Wasteland_Food</tasteThought>
+            <joy>0.10</joy>
+            <joyKind>Gluttonous</joyKind>
+        </ingestible>
+    </ThingDef>
+
+    <!--_____ Happy Birthday Sweet Roll _____-->
+
+    <ThingDef ParentName="FCP_Food_Wasteland_Meals_Base">
+        <defName>FCP_Food_Happy_Birthday_Sweet_Roll</defName>
+        <label>happy birthday sweet roll</label>
+        <description>A special sweet roll decorated for celebrations. While birthdays are rare events worth celebrating in the harsh wasteland, this pastry brings joy and nostalgia for better times. The festive treat provides a significant mood boost.</description>
+        <graphicData>
+            <texPath>Things/Items/Meals/FCP_Happy_Birthday_Sweet_Roll</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>28</MarketValue>
+            <WorkToMake>550</WorkToMake>
+            <Nutrition>0.8</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealFine</preferability>
+            <tasteThought>FCP_Ate_Tasty_Wasteland_Food</tasteThought>
+            <joy>0.18</joy>
+            <joyKind>Gluttonous</joyKind>
+        </ingestible>
+    </ThingDef>
+
 </Defs>
