@@ -6,6 +6,28 @@
     <!-- Base Recipe -->
 
     <RecipeDef Name="FCP_CookWastelandMealBase" Abstract="True">
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <specialFiltersToDisallow>
+                <li>AllowPlantFood</li>
+            </specialFiltersToDisallow>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>EggsUnfertilized</li>
+            </disallowedCategories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+                <li>InsectJelly</li>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
         <workSpeedStat>CookSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
