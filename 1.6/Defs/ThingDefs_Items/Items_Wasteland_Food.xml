@@ -15,7 +15,7 @@
             <drawSize>0.70</drawSize>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <tradeability>Sellable</tradeability>
+        <tradeability>All</tradeability>
         <ingestible>
             <foodType>Meal</foodType>
             <preferability>MealSimple</preferability>
